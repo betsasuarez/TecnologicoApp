@@ -13,7 +13,7 @@
             <Image
                 Margin="30"
                 HeightRequest="80"
-                Source="loing.png"
+                Source="login.png"
                 WidthRequest="80" />
             <StackLayout Padding="40" Spacing="30">
                 <Entry
