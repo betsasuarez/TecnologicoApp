@@ -11,34 +11,40 @@
     <ScrollView>
         <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
             <Image
-                Margin="30"
-                HeightRequest="80"
+                Margin="0,30,0,0"
+                HeightRequest="100"
+                HorizontalOptions="Center"
                 Source="login.png"
-                WidthRequest="80" />
+                WidthRequest="100" />
             <StackLayout Padding="40" Spacing="30">
                 <Entry
-                    HeightRequest="40"
+                    x:Name="EmailEntry"
+                    HorizontalOptions="Center"
+                    Keyboard="Email"
                     Placeholder="Email"
                     PlaceholderColor="Gray"
+                    Text="{Binding Usuario.Email}"
                     TextColor="Black"
                     WidthRequest="333" />
                 <Entry
-                    HeightRequest="40"
+                    x:Name="PasswordEntry"
+                    HorizontalOptions="Center"
+                    Placeholder="Contraseña"
                     PlaceholderColor="Gray"
+                    Text="{Binding Usuario.Password}"
                     TextColor="Black"
                     WidthRequest="333" />
-
-                <Button Text="Agregar" />
-
+                <Button
+                    x:Name="LoginBtn"
+                    Command="{Binding LoginCommand}"
+                    Text="Iniciar" />
             </StackLayout>
-
             <StackLayout>
                 <Label
                     FontSize="16"
                     HorizontalOptions="Center"
                     Text="Register" />
             </StackLayout>
-
         </StackLayout>
 
     </ScrollView>
